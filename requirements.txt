@@ -1,0 +1,19 @@
+streamlit
+langchain
+langchain-openai
+langchain-core
+
+
+### 해결책 3: Streamlit Cloud에 API 키 설정 (Secrets)
+
+GitHub에 API 키를 절대 올리면 안 됩니다. 대신 Streamlit Cloud 대시보드에서 안전하게 키를 입력해야 합니다.
+
+1.  Streamlit Cloud (share.streamlit.io)에서 배포된 앱으로 이동합니다.
+2.  우측 하단의 **`Manage app`** 버튼을 클릭합니다.
+3.  앱 설정 페이지에서 **`Settings`** 탭을 클릭한 뒤, **`Secrets`** 메뉴로 이동합니다.
+4.  아래 내용을 그대로 복사하여 텍스트 필드에 붙여넣고 **`Save`**를 누릅니다. (`sk-...)` 부분은 본인의 실제 API 키로 교체하세요.
+
+
+
+```toml
+OPENAI_API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxx"
